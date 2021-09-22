@@ -8,7 +8,8 @@
         "pullups" : "pull",
         "rows" : "pull",
         "thrusts" : "legs",
-        "leg raises" : "core"
+        "leg raises" : "core",
+        "curls" : "pull"
     },
     "exercise_counts" : {
         "deadlifts" : 2,
@@ -19,7 +20,8 @@
         "pullups" : 2,
         "rows" : 2,
         "thrusts" : 2,
-        "leg raises" : 3
+        "leg raises" : 3,
+        "curls" : 2
     },
     "group_min_recovery_days" : {
         "legs" : 2,
@@ -27,7 +29,59 @@
         "pull" : 2,
         "core" : 0
     },
-    "max_session_volume" : 4,
+    "exercise_durations" : {
+        "deadlifts" : {
+            "sets" : 3,
+            "set_duration_sec" : 60,
+            "rest_period_sec" : 210
+        },
+        "squats" : {
+            "sets" : 5,
+            "set_duration_sec" : 30,
+            "rest_period_sec" : 180
+        },
+        "ohp" : {
+            "sets" : 5,
+            "set_duration_sec" : 30,
+            "rest_period_sec" : 210
+        },
+        "bp" : {
+            "sets" : 5,
+            "set_duration_sec" : 30,
+            "rest_period_sec" : 180
+        },
+        "dips" : {
+            "sets" : 5,
+            "set_duration_sec" : 30,
+            "rest_period_sec" : 180
+        },
+        "pullups" : {
+            "sets" : 5,
+            "set_duration_sec" : 30,
+            "rest_period_sec" : 210
+        },
+        "rows" : {
+            "sets" : 5,
+            "set_duration_sec" : 30,
+            "rest_period_sec" : 120
+        },
+        "thrusts" : {
+            "sets" : 3,
+            "set_duration_sec" : 30,
+            "rest_period_sec" : 120
+        },
+        "leg raises" : {
+            "sets" : 3,
+            "set_duration_sec" : 30,
+            "rest_period_sec" : 120
+        },
+        "curls" : {
+            "sets" : 3,
+            "set_duration_sec" : 30,
+            "rest_period_sec" : 120
+        }
+    },
+    "max_session_duration_minutes" : 75,
     "n_days" : 7,
     "day_names" : ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
 }

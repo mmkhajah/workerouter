@@ -34,11 +34,15 @@ def main(spec):
     for eid, e in enumerate(G.index):
         for d in np.arange(spec['n_days']):
             D[eid, d] = pyo.value(model.v_exercise_schedule[e,d])
-    
-    D = pd.DataFrame(data=D, index=G.index, columns=spec['day_names'], dtype=int)
-    print(D)
 
-    print(np.sum(D, axis=0))
+    ed = spec['exercise_durations']
+    DM = np.array([ed[e]['sets'] * (ed[e]['set_duration_sec'] + ed[e]['rest_period_sec']) for e in G.index])
+    
+    D_time_sec = D * DM[:,np.newaxis]
+    schedule_time_min = pd.DataFrame(data=D_time_sec / 60, index=G.index, columns=spec['day_names'])
+    print(schedule_time_min)
+
+    print(np.sum(schedule_time_min, axis=0))
 def create_group_matrix(spec):
 
     exercises = sorted(spec['exercises'])
@@ -129,9 +133,12 @@ def make_model(G, C, spec):
     # ensure the number of exercises does not exceed the maximum in each day
     #
     model.c_session_volume = pyo.ConstraintList()
+    ed = spec['exercise_durations']
     for d in model.days:
-        n_working_exercises = sum(model.v_exercise_schedule[e, d] for e in model.exercises)
-        model.c_session_volume.add(n_working_exercises <= spec['max_session_volume'])
+        total_time_sec = sum(model.v_exercise_schedule[e, d] * 
+                                  (ed[e]['sets'] * (ed[e]['set_duration_sec'] + ed[e]['rest_period_sec']))
+                                  for e in model.exercises)
+        model.c_session_volume.add(total_time_sec <= spec['max_session_duration_minutes'] * 60)
     
     return model 
 
