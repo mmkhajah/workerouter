@@ -115,15 +115,16 @@ def make_model(G, C, spec):
             model.c_working_groups.add((model.v_group_schedule[g, d] * n_group_exercises) >= n_working_exercises)
     
     #
-    # ensure that the same group has the required minimum recovery duration
+    # ensure that groups meet the required minimum recovery duration
     #
     model.c_recovery = pyo.ConstraintList()
-    for k in range(1, spec['min_recovery_days']+1):
-        for d in model.days:
-            next_day = (d+k) % spec['n_days']
-            for g in model.groups:
+    for g in model.groups:
+        min_recovery_days = spec['group_min_recovery_days'][g]
+        for k in range(1, min_recovery_days+1):
+            for d in model.days:
+                next_day = (d+k) % spec['n_days']
                 model.c_recovery.add((model.v_group_schedule[g, d] + model.v_group_schedule[g, next_day]) <= 1)
-        
+            
     #
     # ensure the number of exercises does not exceed the maximum in each day
     #
