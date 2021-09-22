@@ -3,7 +3,7 @@
         "deadlifts" : "legs",
         "squats" : "legs",
         "ohp" : "press",
-        "bp" : "press",
+        "bench press" : "press",
         "dips" : "press",
         "pullups" : "pull",
         "rows" : "pull",
@@ -15,7 +15,7 @@
         "deadlifts" : 2,
         "squats" : 2,
         "ohp" : 2,
-        "bp" : 2,
+        "bench press" : 2,
         "dips" : 2,
         "pullups" : 2,
         "rows" : 2,
@@ -45,7 +45,7 @@
             "set_duration_sec" : 30,
             "rest_period_sec" : 210
         },
-        "bp" : {
+        "bench press" : {
             "sets" : 5,
             "set_duration_sec" : 30,
             "rest_period_sec" : 180

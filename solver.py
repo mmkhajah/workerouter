@@ -22,7 +22,7 @@ def main(spec):
     #model.display()
 
     if (results.solver.status == pyo.SolverStatus.ok) and (results.solver.termination_condition == pyo.TerminationCondition.optimal):
-        print ("this is feasible and optimal")
+        pass
     elif results.solver.termination_condition == pyo.TerminationCondition.infeasible:
         print ("infeasible solution")
         exit()
@@ -40,8 +40,11 @@ def main(spec):
     
     D_time_sec = D * DM[:,np.newaxis]
     schedule_time_min = pd.DataFrame(data=D_time_sec / 60, index=G.index, columns=spec['day_names'])
+    print("Schedule and exercise durations in minutes:")
     print(schedule_time_min)
 
+    print()
+    print("Total session durations in minutes:")
     print(np.sum(schedule_time_min, axis=0))
 def create_group_matrix(spec):
 
