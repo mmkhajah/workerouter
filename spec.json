@@ -1,81 +1,81 @@
 {
     "exercises" : {
-        "deadlifts" : "legs",
-        "squats" : "legs",
-        "ohp" : "press",
-        "bench press" : "press",
-        "dips" : "press",
-        "pullups" : "pull",
-        "rows" : "pull",
-        "thrusts" : "legs",
-        "leg raises" : "core",
-        "curls" : "pull"
+        "Deadlifts" : "legs",
+        "Squats" : "legs",
+        "OHP" : "press",
+        "Bench Press" : "press",
+        "Dips" : "press",
+        "Pullups" : "pull",
+        "Rows" : "pull",
+        "Thrusts" : "legs",
+        "Leg Raises" : "core",
+        "Curls" : "pull"
     },
     "exercise_counts" : {
-        "deadlifts" : 2,
-        "squats" : 2,
-        "ohp" : 2,
-        "bench press" : 2,
-        "dips" : 2,
-        "pullups" : 2,
-        "rows" : 2,
-        "thrusts" : 2,
-        "leg raises" : 3,
-        "curls" : 2
+        "Deadlifts" : 2,
+        "Squats" : 2,
+        "OHP" : 3,
+        "Bench Press" : 2,
+        "Dips" : 2,
+        "Pullups" : 2,
+        "Rows" : 2,
+        "Thrusts" : 2,
+        "Leg Raises" : 3,
+        "Curls" : 2
     },
     "group_min_recovery_days" : {
         "legs" : 2,
-        "press" : 2,
+        "press" : 1,
         "pull" : 2,
         "core" : 0
     },
     "exercise_durations" : {
-        "deadlifts" : {
+        "Deadlifts" : {
             "sets" : 3,
             "set_duration_sec" : 60,
             "rest_period_sec" : 210
         },
-        "squats" : {
+        "Squats" : {
             "sets" : 5,
             "set_duration_sec" : 30,
             "rest_period_sec" : 180
         },
-        "ohp" : {
+        "OHP" : {
             "sets" : 5,
             "set_duration_sec" : 30,
             "rest_period_sec" : 210
         },
-        "bench press" : {
+        "Bench Press" : {
             "sets" : 5,
             "set_duration_sec" : 30,
             "rest_period_sec" : 180
         },
-        "dips" : {
+        "Dips" : {
             "sets" : 5,
             "set_duration_sec" : 30,
             "rest_period_sec" : 180
         },
-        "pullups" : {
+        "Pullups" : {
             "sets" : 5,
             "set_duration_sec" : 30,
             "rest_period_sec" : 210
         },
-        "rows" : {
+        "Rows" : {
             "sets" : 5,
             "set_duration_sec" : 30,
             "rest_period_sec" : 120
         },
-        "thrusts" : {
+        "Thrusts" : {
             "sets" : 3,
             "set_duration_sec" : 30,
             "rest_period_sec" : 120
         },
-        "leg raises" : {
+        "Leg Raises" : {
             "sets" : 3,
             "set_duration_sec" : 30,
             "rest_period_sec" : 120
         },
-        "curls" : {
+        "Curls" : {
             "sets" : 3,
             "set_duration_sec" : 30,
             "rest_period_sec" : 120
