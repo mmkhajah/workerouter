@@ -1,0 +1,26 @@
+{
+    "exercises" : {
+        "deadlifts" : "legs",
+        "squats" : "legs",
+        "ohp" : "press",
+        "bp" : "press",
+        "dips" : "press",
+        "pullups" : "pull",
+        "rows" : "pull",
+        "thrusts" : "legs"
+    },
+    "exercise_counts" : {
+        "deadlifts" : 2,
+        "squats" : 2,
+        "ohp" : 2,
+        "bp" : 2,
+        "dips" : 2,
+        "pullups" : 2,
+        "rows" : 2,
+        "thrusts" : 2
+    },
+    "max_session_volume" : 5,
+    "min_recovery_days" : 2,
+    "n_days" : 7,
+    "day_names" : ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+}
